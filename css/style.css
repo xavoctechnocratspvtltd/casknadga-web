@@ -32354,3 +32354,7 @@ a.pswp__share--download:hover {
 .img-thumbnail > div {
   width: 100%;
 }
+
+.breadcrumb{
+	padding: 35px 15px !important;
+}

@@ -39,14 +39,14 @@
                         <button data-rd-navbar-toggle=".rd-navbar-nav-wrap" class="rd-navbar-toggle"><span></span></button>
                         <button data-rd-navbar-toggle=".rd-navbar-collapse" class="rd-navbar-collapse-toggle"><span></span></button>
                          
-                        <div class="rd-navbar-brand"><a href="index.html" class="brand-name"><img src="images/logo3-black.png" alt="" width="268" height="57"></a></div>
-                        <div class="rd-navbar-brand-mobile"><a href="index.html" class="brand-name"><img src="images/logo3-black.png" alt="" width="268" height="57"></a></div>
+                        <div class="rd-navbar-brand"><a href="index" class="brand-name"><img src="images/logo3-black.png" alt="" width="268" height="57"></a></div>
+                        <div class="rd-navbar-brand-mobile"><a href="index" class="brand-name"><img src="images/logo3-black.png" alt="" width="268" height="57"></a></div>
                         </div>
                         <div class="rd-navbar-nav-wrap">
                          
                         <ul class="rd-navbar-nav">
-                        <li class="active"><a href="./">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li class="active"><a href="index">Home</a></li>
+                        <li><a href="about">About</a></li>
                         <!-- <li><a href="planning.html">Financial Planning</a></li> -->
                         <!-- <li><a href="investment.html">Investment Help</a></li> -->
                         <!-- <li class="rd-navbar--has-dropdown rd-navbar-submenu"><a href="advice.html">Advice</a> -->
@@ -62,7 +62,7 @@
                         <li><a href="video.html">Video</a></li>
                         </ul> -->
                         <span class="rd-navbar-submenu-toggle"></span></li>
-                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="contact">Contacts</a></li>
                         <!-- <li class="extra-link"><a href="free-consultation.html"><span>Free Consultation</span></a></li> -->
                         </ul>
                         </div>
@@ -78,7 +78,7 @@
         <footer class="page-foot text-sm-left section-50 section-lg-90 offset-md-top--40">
             <div class="shell">
                 <div class="range">
-                    <div class="cell-md-5 offset-top-10"><a href="index.html" class="brand"><img src="images/logo3.png" alt="" width="266" height="55"></a>
+                    <div class="cell-md-5 offset-top-10"><a href="index" class="brand"><img src="images/logo3.png" alt="" width="266" height="55"></a>
                         <p>Investment products and services available only to residents of : Arizona - AZ, California - CA, Hawaii - HI, Idaho - ID, New Jersey - NJ, New Mexico - NM, Oregon - OR, Washington - WA Securities and Investment Advice through John Doe &amp; Company, A registered broker/dealer and Investment Advisor, Member FINRA and SIPC. 101 Serious Road, Fincity, FL 32707 Tel: (959) 603- 6035.| John Doe Financial Advisors is not an affiliate of Wall Street Company.</p>
                         <p>All other trademarks and copyrights are the properties of their respective holders. This website provides information related to the subjects covered. Before making any financial or legal decisions, a professional should be consulted.</p>
                     </div>
@@ -112,27 +112,37 @@
 </body>
 <script type="text/javascript">
     $(function() {
-        var wSize = $(window).width();
-        if(980 > wSize ) {
-            $('.rd-navbar')
-                .removeClass('rd-navbar-static')
-                .addClass('rd-navbar-fixed')
-                ;
-            $('.rd-navbar-wrap').css('height','0px');
-            $('.rd-navbar-toggle').click(function(){
-                $('.rd-navbar-nav-wrap').toggleClass('active');
-            });    
-            $('.rd-navbar-collapse-toggle').click(function(){
-                $('.rd-navbar-collapse').toggleClass('active');
+        // $(window).resize(function() {
+            var screenSize = screen.availWidth;
+            var windowSize = $(window).width();
 
-            });
-        } else {
-            $('.rd-navbar')
-                .removeClass('rd-navbar-fixed')
-                .addClass('rd-navbar-static')
-                ;
-            $('.rd-navbar-wrap').css('height','157px');    
-    }
+            var wSize = screenSize;
+            if(screenSize > windowSize )
+                wSize = windowSize;
+
+            if(980 > wSize ) {
+                $('.rd-navbar')
+                    .removeClass('rd-navbar-static')
+                    .addClass('rd-navbar-fixed')
+                    ;
+                $('.rd-navbar-wrap').css('height','0px');
+                $('.breadcrumb').css('margin-top','20%');
+                $('.rd-navbar-toggle').click(function(){
+                    $('.rd-navbar-nav-wrap').toggleClass('active');
+                });    
+                $('.rd-navbar-collapse-toggle').click(function(){
+                    $('.rd-navbar-collapse').toggleClass('active');
+
+                });
+            } else {
+                $('.rd-navbar')
+                    .removeClass('rd-navbar-fixed')
+                    .addClass('rd-navbar-static')
+                    ;
+                $('.rd-navbar-wrap').css('height','157px');    
+            }    
+        // });
+        
 });
 
     
