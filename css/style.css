@@ -25083,7 +25083,7 @@ html:not(.lt-ie10) .not-animated {
 }
 
 .rd-navbar-toggle span:after, .rd-navbar-toggle span:before, .rd-navbar-toggle span {
-  width: 18px;
+  width: 40px;
   height: 3px;
   background-color: #6e7273;
   backface-visibility: hidden;
@@ -32354,7 +32354,10 @@ a.pswp__share--download:hover {
 .img-thumbnail > div {
   width: 100%;
 }
-
 .breadcrumb{
 	padding: 35px 15px !important;
 }
+.rd-navbar-fixed .rd-navbar-panel{
+	height: 65px!important;
+}
+
