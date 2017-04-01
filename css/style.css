@@ -32361,3 +32361,35 @@ a.pswp__share--download:hover {
 	height: 65px!important;
 }
 
+.quote p > q {
+    background-color: #fff;
+    border: 0 none;
+    border-radius: 8px;
+    box-shadow: 0 10px 0 0 #4dcbf0;
+    color: #6e7273;
+    display: block;
+    font-size: 18px;
+    line-height: 26px;
+    overflow: visible;
+    padding: 79px 20px 30px;
+    position: relative;
+}
+
+.quote p > q::before, .quote p > q::after {
+    border-color: #fff transparent transparent;
+    border-style: solid;
+    border-width: 23px 18px 0 0;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 32px;
+    top: 100%;
+    transform: skew(-22deg, 0deg);
+    width: 0;
+    z-index: 2;
+}
+.quote p > q::after {
+    border-top-color: #4dcbf0;
+    margin-top: 10px;
+    z-index: 1;
+}
