@@ -1,16 +1,16 @@
 .contact-form
 	form#contact-form(method='post', action='sendmail.php', role='form')
 		.form-group.wow.fadeInDown(data-wow-duration='500ms', data-wow-delay='.6s')
-			.atk-form-row.atk-form-field{$name}
+			.atk-form-row.atk-form-field{$Name}
 			//- input#name.form-control(placeholder='Your Name', name='name', type='text')
 		.form-group.wow.fadeInDown(data-wow-duration='500ms', data-wow-delay='.8s')
-			.atk-form-row.atk-form-field{$email}
+			.atk-form-row.atk-form-field{$Email}
 			//- input#email.form-control(placeholder='Your Email', name='email', type='email')
 		.form-group.wow.fadeInDown(data-wow-duration='500ms', data-wow-delay='1s')
-			.atk-form-row.atk-form-field{$subject}
+			.atk-form-row.atk-form-field{$Telephone}
 			//- input#subject.form-control(placeholder='Subject', name='subject', type='text')
 		.form-group.wow.fadeInDown(data-wow-duration='500ms', data-wow-delay='1.2s')
-			.atk-form-row.atk-form-field{$message}
+			.atk-form-row.atk-form-field{$Messages}
 			//- textarea#message.form-control(rows='6', placeholder='Message', name='message')
 		#submit.wow.fadeInDown(data-wow-duration='500ms', data-wow-delay='1.4s')
 			#contact-submit.btn.btn-default.btn-send{$FormButtons}
